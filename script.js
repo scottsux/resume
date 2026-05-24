@@ -67,7 +67,8 @@ projectToggles.forEach((toggle) => {
     }
 
     toggle.setAttribute("aria-expanded", String(!isExpanded));
-    toggle.textContent = isExpanded ? "Details" : "Close";
+    toggle.textContent = isExpanded ? "详情" : "收起";
+    toggle.setAttribute("aria-label", isExpanded ? "展开项目详情" : "收起项目详情");
     details.hidden = isExpanded;
   });
 });
